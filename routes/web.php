@@ -18,7 +18,7 @@ Route::get('/', function () {
 });
 
 Route::get('/demo',function(){
-    echo 'Hello World';
+    return view('demo');
 });
 
 Route::any('/test',function(){
