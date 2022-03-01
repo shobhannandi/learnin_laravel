@@ -15,5 +15,13 @@
         Welcome, {{$name ?? 'user'}}
     </h1>
     {!! $demo !!}
+    @if($name=='')
+      {{'Name is empty.'}}
+    @elseif($name == 'Shobhan')
+      {{"Name is Shobhan"}}
+    @else
+    {{'Name is not Shobhan'}}
+    @endif
+
   </body>
 </html>
