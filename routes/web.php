@@ -12,15 +12,9 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/{name?}', function ($name) {
+    $demo='<h2>My name is Shobhan Nandi.</h2>';
+    $data=compact('name','demo');
+    return view('home')->with($data);
 });
 
-Route::get('/demo',function(){
-    return view('demo');
-});
-
-Route::any('/test',function(){
-    echo 'Testing the route';
-});
